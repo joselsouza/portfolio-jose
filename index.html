@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-BR" data-lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>José Neto</title>
+    <meta name="description" content="José Neto, desenvolvedor de software. Projetos com Java, Spring Boot, React e Python." />
+    <meta property="og:title" content="José Neto" />
+    <meta property="og:description" content="Desenvolvedor de software. Projetos com Java, Spring Boot, React e Python." />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f0f0f" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Aplica idioma e tema salvos antes da pintura, para não piscar.
+      (function () {
+        var root = document.documentElement;
+        try {
+          var lang = localStorage.getItem('lang');
+          if (lang === 'pt' || lang === 'en') root.dataset.lang = lang;
+          var theme = localStorage.getItem('theme');
+          if (theme === 'light' || theme === 'dark') root.dataset.theme = theme;
+        } catch (e) {}
+        root.lang = root.dataset.lang === 'en' ? 'en' : 'pt-BR';
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#content">
+      <span data-l="pt">Ir para o conteúdo</span><span data-l="en">Skip to content</span>
+    </a>
+
+    <div class="page">
+      <header class="top">
+        <a class="brand" href="./">
+          <span class="brand-name">José Neto</span>
+          <span class="brand-sep" aria-hidden="true">|</span>
+          <span class="brand-handle">@joseluisneto</span>
+        </a>
+
+        <nav class="top-nav" aria-label="Preferências">
+          <a class="nav-link" href="#projetos">
+            <span data-l="pt">Projetos</span><span data-l="en">Projects</span>
+          </a>
+          <div class="langs">
+            <button type="button" class="lang" data-set-lang="pt" aria-label="Português">pt</button>
+            <span aria-hidden="true">/</span>
+            <button type="button" class="lang" data-set-lang="en" aria-label="English">en</button>
+          </div>
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+            <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true">
+              <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor" />
+            </svg>
+          </button>
+        </nav>
+      </header>
+
+      <main id="content">
+        <section class="block">
+          <h1>
+            <span data-l="pt">Sobre mim</span><span data-l="en">About me</span>
+          </h1>
+          <div class="prose">
+            <p data-l="pt">
+              Sou desenvolvedor de software e gosto de construir sistemas completos, do banco de dados à
+              interface, com experiência em <strong>Java</strong> e
+              <a href="https://spring.io/projects/spring-boot" target="_blank" rel="noopener">Spring Boot</a> no
+              backend, <strong>React</strong> no frontend e <strong>Python</strong> para projetos com IA.
+            </p>
+            <p data-l="en">
+              I'm a software developer who enjoys building complete systems, from the database to the
+              interface, with experience in <strong>Java</strong> and
+              <a href="https://spring.io/projects/spring-boot" target="_blank" rel="noopener">Spring Boot</a> on
+              the backend, <strong>React</strong> on the frontend and <strong>Python</strong> for AI projects.
+            </p>
+            <p data-l="pt">
+              Tenho estudado agentes de IA, busca semântica (RAG) e como colocar produtos reais no ar, com
+              deploy contínuo, pagamentos e aplicações que funcionam bem no celular.
+            </p>
+            <p data-l="en">
+              I've been studying AI agents, semantic search (RAG) and how to ship real products, with
+              continuous deployment, payments and apps that work well on mobile.
+            </p>
+          </div>
+        </section>
+
+        <section class="block" id="projetos" aria-labelledby="projetos-title">
+          <h2 id="projetos-title">
+            <span data-l="pt">Projetos</span><span data-l="en">Projects</span>
+          </h2>
+
+          <ol class="projects">
+            <!-- AngraFight -->
+            <li class="project">
+              <div class="project-head">
+                <h3>AngraFight</h3>
+                <span class="date">
+                  <span data-l="pt">nov. de 2026</span><span data-l="en">Nov 2026</span>
+                </span>
+              </div>
+              <p class="project-kind">
+                <span data-l="pt">Sistema de gestão para academia de Jiu-Jitsu</span>
+                <span data-l="en">Management system for a Jiu-Jitsu academy</span>
+              </p>
+              <p data-l="pt">
+                Desenvolvi de ponta a ponta o sistema que administra a academia AngraFight: cadastro de alunos,
+                planos, mensalidades com cobrança automática via Asaas, controle de inadimplência e
+                acompanhamento de graduação por frequência. A presença é registrada por
+                <strong>reconhecimento facial no navegador</strong>, rodando em um Web Worker; as fotos não
+                saem do aparelho, só os vetores numéricos vão ao servidor. Os alunos têm um portal próprio e
+                recebem notificações push.
+              </p>
+              <p data-l="en">
+                I built, end to end, the system that runs the AngraFight academy: student records, plans,
+                monthly fees with automatic billing through Asaas, overdue tracking and belt promotion based
+                on attendance. Attendance is recorded with <strong>in-browser face recognition</strong> running
+                in a Web Worker; photos never leave the device, only numeric vectors reach the server. Students
+                get their own portal and push notifications.
+              </p>
+              <ul class="tags" aria-label="Tecnologias">
+                <li>Java 17</li><li>Spring Boot</li><li>Spring Security</li><li>PostgreSQL</li><li>Flyway</li>
+                <li>React 19</li><li>Vite</li><li>face-api.js</li>
+              </ul>
+              <p class="links">
+                <a href="https://angrafight.pages.dev" target="_blank" rel="noopener">
+                  <span data-l="pt">Ver no ar</span><span data-l="en">Live site</span> ↗
+                </a>
+                <a href="https://github.com/gagoraro/angraFight" target="_blank" rel="noopener">
+                  <span data-l="pt">Código</span><span data-l="en">Source</span> ↗
+                </a>
+              </p>
+            </li>
+
+            <!-- Landing page Jéssica -->
+            <li class="project">
+              <div class="project-head">
+                <h3>
+                  <span data-l="pt">Landing page da Jéssica Souza</span>
+                  <span data-l="en">Landing page for Jéssica Souza</span>
+                </h3>
+                <span class="date">
+                  <span data-l="pt">nov. de 2026</span><span data-l="en">Nov 2026</span>
+                </span>
+              </div>
+              <p class="project-kind">
+                <span data-l="pt">Portfólio para uma jornalista · freelance</span>
+                <span data-l="en">Portfolio for a journalist · freelance</span>
+              </p>
+              <p data-l="pt">
+                Criei a landing page da jornalista Jéssica Souza, com passagens por O Globo, Extra, Canal Futura
+                e BandNews FM. O site reúne apresentação, currículo, uma galeria das matérias publicadas
+                organizada por veículo e contato direto por WhatsApp e e-mail. Todo o conteúdo fica em um único
+                arquivo de dados, para que textos e matérias sejam atualizados sem mexer no layout.
+              </p>
+              <p data-l="en">
+                I built the landing page for journalist Jéssica Souza, who has worked at O Globo, Extra, Canal
+                Futura and BandNews FM. The site brings together her bio, résumé, a gallery of published stories
+                grouped by outlet, and direct contact via WhatsApp and email. All content lives in a single data
+                file, so texts and stories can be updated without touching the layout.
+              </p>
+              <ul class="tags" aria-label="Tecnologias">
+                <li>React 19</li><li>Vite</li><li>CSS</li><li><span data-l="pt">Responsivo</span><span data-l="en">Responsive</span></li>
+              </ul>
+              <p class="links">
+                <a href="https://github.com/gagoraro/portfolio-jessica" target="_blank" rel="noopener">
+                  <span data-l="pt">Código</span><span data-l="en">Source</span> ↗
+                </a>
+              </p>
+            </li>
+
+            <!-- Agente RAG -->
+            <li class="project">
+              <div class="project-head">
+                <h3>Atlas: <span data-l="pt">Agente RAG</span><span data-l="en">RAG Agent</span></h3>
+                <span class="date">
+                  <span data-l="pt">ago. de 2026</span><span data-l="en">Aug 2026</span>
+                </span>
+              </div>
+              <p class="project-kind">
+                <span data-l="pt">Projeto final do curso “Agents For Everything”</span>
+                <span data-l="en">Final project for the “Agents For Everything” course</span>
+              </p>
+              <p data-l="pt">
+                Agente em Python que responde perguntas sobre o Oscar 2026 a partir de uma base de conhecimento
+                local. O texto é dividido em trechos e transformado em embeddings com a API do Gemini; a
+                pergunta do usuário passa pelo mesmo processo e o <strong>FAISS</strong> encontra os trechos
+                mais próximos por similaridade. O Gemini então gera a resposta usando só esse contexto
+                recuperado.
+              </p>
+              <p data-l="en">
+                A Python agent that answers questions about the 2026 Oscars from a local knowledge base. The
+                text is split into chunks and turned into embeddings with the Gemini API; the user's question
+                goes through the same step and <strong>FAISS</strong> finds the closest chunks by similarity.
+                Gemini then writes the answer using only that retrieved context.
+              </p>
+              <ul class="tags" aria-label="Tecnologias">
+                <li>Python</li><li>Gemini API</li><li>FAISS</li><li>NumPy</li><li>RAG</li>
+              </ul>
+              <p class="links">
+                <a href="https://github.com/gagoraro/agenterag" target="_blank" rel="noopener">
+                  <span data-l="pt">Código</span><span data-l="en">Source</span> ↗
+                </a>
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="block" id="experiencia" aria-labelledby="exp-title">
+          <h2 id="exp-title">
+            <span data-l="pt">Experiência</span><span data-l="en">Experience</span>
+          </h2>
+
+          <div class="company">
+            <h3 class="company-name">CMX Tecnologia</h3>
+
+            <div class="role">
+              <div class="project-head">
+                <h4>
+                  <span data-l="pt">Analista de TI Jr.</span><span data-l="en">Junior IT Analyst</span>
+                </h4>
+                <span class="date">
+                  <span data-l="pt">mai. de 2025 a set. de 2026</span><span data-l="en">May 2025 to Sep 2026</span>
+                </span>
+              </div>
+              <ul class="role-list" data-l="pt">
+                <li>Desenvolvimento de automações (n8n)</li>
+                <li>Desenvolvimento de agentes de IA</li>
+                <li>Integração com APIs</li>
+                <li>Desenvolvimento de banco de dados vetorial para agentes RAG</li>
+              </ul>
+              <ul class="role-list" data-l="en">
+                <li>Building automations (n8n)</li>
+                <li>Building AI agents</li>
+                <li>API integrations</li>
+                <li>Building vector databases for RAG agents</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <div class="project-head">
+                <h4>
+                  <span data-l="pt">Estagiário de TI</span><span data-l="en">IT Intern</span>
+                </h4>
+                <span class="date">
+                  <span data-l="pt">fev. a abr. de 2025</span><span data-l="en">Feb to Apr 2025</span>
+                </span>
+              </div>
+              <ul class="role-list" data-l="pt">
+                <li>Auxílio no desenvolvimento de automações (n8n)</li>
+                <li>Auxílio no desenvolvimento de agentes de IA</li>
+              </ul>
+              <ul class="role-list" data-l="en">
+                <li>Helped build automations (n8n)</li>
+                <li>Helped build AI agents</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" aria-labelledby="stack-title">
+          <h2 id="stack-title">
+            <span data-l="pt">Ferramentas</span><span data-l="en">Tools</span>
+          </h2>
+          <dl class="stack">
+            <div><dt>Backend</dt><dd>Java, Spring Boot, Spring Security, JPA, Flyway</dd></div>
+            <div><dt>Frontend</dt><dd>React, JavaScript, Vite, HTML, CSS</dd></div>
+            <div><dt><span data-l="pt">Dados</span><span data-l="en">Data</span></dt><dd>PostgreSQL, Supabase</dd></div>
+            <div><dt><span data-l="pt">IA</span><span data-l="en">AI</span></dt><dd>Python, Gemini API, FAISS, RAG</dd></div>
+          </dl>
+        </section>
+      </main>
+
+      <footer class="foot">
+        <a href="https://github.com/gagoraro" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/joseluisneto/" target="_blank" rel="noopener">LinkedIn</a>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
