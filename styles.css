@@ -355,9 +355,38 @@ h4 {
   font-weight: 500;
 }
 
+.stack div {
+  align-items: center;
+}
+
 .stack dd {
   margin: 0;
   color: var(--muted);
+}
+
+.stack .tags {
+  margin: 0;
+}
+
+/* Currículo */
+.prose .cv {
+  margin-top: 20px;
+}
+
+.cv a {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.cv a:hover {
+  border-color: var(--subtle);
 }
 
 /* Rodapé */
