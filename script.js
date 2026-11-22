@@ -52,4 +52,23 @@
   });
 
   if (root.dataset.theme) syncThemeMeta();
+
+  // Demonstração em vídeo: abre o player embaixo do projeto (sem JS, o link abre o MP4).
+  document.querySelectorAll('.demo-toggle').forEach(function (link) {
+    var fig = document.getElementById(link.getAttribute('aria-controls'));
+    if (!fig) return;
+    var video = fig.querySelector('video');
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var abrir = fig.hidden;
+      fig.hidden = !abrir;
+      link.setAttribute('aria-expanded', String(abrir));
+      if (abrir) {
+        var p = video.play();
+        if (p && p.catch) p.catch(function () {});
+      } else {
+        video.pause();
+      }
+    });
+  });
 })();

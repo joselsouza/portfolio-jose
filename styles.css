@@ -300,6 +300,25 @@ strong {
   font-size: 13px;
 }
 
+.demo {
+  margin: 16px 0 0;
+}
+
+.demo video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--tag-bg);
+}
+
+.demo figcaption {
+  margin-top: 8px;
+  color: var(--subtle);
+  font-size: 12px;
+}
+
 /* Experiência */
 .company-name {
   font-size: 14px;
